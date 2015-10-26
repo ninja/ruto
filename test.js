@@ -1,5 +1,4 @@
 import {Server} from 'hapi';
-import hapi from 'hapi-test';
 import {resolve} from 'path';
 import ruto from 'ruto';
 import test from 'tape';
@@ -16,46 +15,41 @@ server.register([api, {
   },
   register: ruto
 }], error => {
-  if (error) { throw error; }
-
-  test('IndexRoute', t => {
-    hapi({server})
-      .get('/')
-      .end(response => {
-        t.equals(response.statusCode, 200, 'Should return status code 200.');
-        t.end();
-      });
+  test('Register plugin:', t => {
+    t.error(error, 'Should register without error.');
+    t.end();
   });
 
-  test('Route', t => {
+  test('Route to roles:', t => {
+    server.inject('/', response => {
+      t.equals(response.statusCode, 200, 'Should return status code: 200.');
+      t.end();
+    });
+  });
+
+  test('Route to role:', t => {
     const key = 'a';
 
-    hapi({server})
-      .get(`/role/${key}`)
-      .end(response => {
-        const {result, statusCode} = response;
+    server.inject(`/role/${key}`, response => {
+      const {result, statusCode} = response;
 
-        t.equals(statusCode, 200, 'Should return status code 200.');
-        t.equals(result.params.key, key, 'Should return param key.');
-        t.end();
-      });
+      t.equals(statusCode, 200, 'Should return status code: 200.');
+      t.equals(result.params.key, key, `Should return key param with value: "${key}".`);
+      t.end();
+    });
   });
 
-  test('Redirect', t => {
-    hapi({server})
-      .get('/redirect/b')
-      .end(response => {
-        t.equals(response.statusCode, 302, 'Should return status code 302.');
-        t.end();
-      });
+  test('Redirect to role:', t => {
+    server.inject('/redirect/b', response => {
+      t.equals(response.statusCode, 302, 'Should return status code: 302.');
+      t.end();
+    });
   });
 
-  test('NotFound', t => {
-    hapi({server})
-      .get('/notfound')
-      .end(response => {
-        t.equals(response.statusCode, 404, 'Should return status code 404.');
-        t.end();
-      });
+  test('Route not found:', t => {
+    server.inject('/notfound', response => {
+      t.equals(response.statusCode, 404, 'Should return status code: 404.');
+      t.end();
+    });
   });
 });

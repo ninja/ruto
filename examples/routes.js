@@ -8,6 +8,6 @@ export default (
   <Route path="/">
     <IndexRoute component={Roles} props={{action: fetchRoles}}/>
     <Route component={Role} path="/role/:key" props={{action: fetchRole}}/>
-    <Redirect from="redirect/:id" to="/role/:id"/>
+    <Redirect from="redirect/:key" to="/role/:key"/>
   </Route>
 );
