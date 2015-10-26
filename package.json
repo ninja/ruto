@@ -1,0 +1,53 @@
+{
+  "bin": {
+    "ruto": "./bin/index.js"
+  },
+  "dependencies": {
+    "history": "1.12.6",
+    "react-router": "1.0.0-rc3",
+    "require-reload": "^0.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1",
+    "babel-loader": "^5.3",
+    "babel-runtime": "^5.8.29",
+    "babel-tape-runner": "^1.2",
+    "eslint": "^1.7.3",
+    "eslint-config-ninja": "^1.0",
+    "eslint-loader": "^1.1",
+    "eslint-plugin-react": "^3.6",
+    "hapi": "^11",
+    "hapi-test": "^4.0",
+    "hapi-webpack-plugin": "^1.2.2",
+    "isomorphic-fetch": "^2.1",
+    "json-loader": "^0.5",
+    "react": "^0.14",
+    "react-dom": "^0.14",
+    "react-hot-loader": "^1.3",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2",
+    "webpack": "^1.12"
+  },
+  "description": "Rūto - Hapi React Router plugin.",
+  "engines": {
+    "node": "^4"
+  },
+  "license": "Apache-2.0",
+  "name": "ruto",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ninja/ruto"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "prepublish": "npm run transpile",
+    "pretest": "npm run lint",
+    "pretranspile": "npm test",
+    "start": "NODE_PATH=source babel-node ./examples/server;",
+    "test": "NODE_PATH=source babel-tape-runner test.js | tap-spec",
+    "transpile": "babel --optional runtime --out-file ./index.js ./source/ruto.js"
+  },
+  "version": "1.0.0"
+}
