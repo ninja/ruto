@@ -1,11 +1,11 @@
 import {Server} from 'hapi';
-import ruto from 'ruto';
-import webpackMiddleware from 'hapi-webpack-plugin';
-import {resolve} from 'path';
 import Webpack from 'webpack';
 import api from './api';
-import webpackConfig from './webpack.config';
+import {resolve} from 'path';
+import ruto from 'ruto';
 import {handleHomomorphic, handleIsomorphic} from './handlers';
+import webpackConfig from './webpack.config';
+import webpackMiddleware from 'hapi-webpack-plugin';
 
 const isomorphic = process.env.RUTO_HANDLER === 'isomorphic';
 const server = new Server();

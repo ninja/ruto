@@ -1,12 +1,11 @@
 {
-  "bin": {
-    "ruto": "./bin/index.js"
-  },
+  "bin": {"ruto": "./bin/index.js"},
   "dependencies": {
     "history": "1.12.6",
     "react-router": "1.0.0-rc3",
     "require-reload": "0.2.2"
   },
+  "description": "Rūto - Hapi React Router plugin.",
   "devDependencies": {
     "babel": "^5.8.29",
     "babel-core": "^5.8.29",
@@ -29,10 +28,7 @@
     "tape": "^4.2.2",
     "webpack": "^1.12.2"
   },
-  "description": "Rūto - Hapi React Router plugin.",
-  "engines": {
-    "node": "^4"
-  },
+  "engines": {"node": "^4"},
   "license": "Apache-2.0",
   "name": "ruto",
   "repository": {
@@ -44,9 +40,9 @@
     "prepublish": "npm run transpile",
     "pretest": "npm run lint",
     "pretranspile": "npm test",
-    "start": "NODE_PATH=src babel-node ./examples/server;",
+    "start": "NODE_PATH=src babel-node ./examples/server",
     "test": "NODE_PATH=src babel-tape-runner test.js | tap-spec",
     "transpile": "babel --optional runtime --out-file ./index.js ./src/ruto.js"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

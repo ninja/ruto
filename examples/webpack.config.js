@@ -16,12 +16,13 @@ const output = {
   publicPath: '/'
 };
 const plugins = [];
+const preLoaders = [];
 
 if (production) {
   const dedupePlugin = new DedupePlugin();
   const uglifyJsPlugin = new UglifyJsPlugin();
 
-  plugins.push(dedupePlugin, occurenceOrderPlugin, uglifyJsPlugin());
+  plugins.push(dedupePlugin, occurenceOrderPlugin, uglifyJsPlugin);
 }
 else {
   loaders.unshift('react-hot');
@@ -37,9 +38,14 @@ else {
   const noErrorsPlugin = new NoErrorsPlugin();
 
   plugins.push(occurenceOrderPlugin, hotModuleReplacementPlugin, noErrorsPlugin);
+
+  preLoaders.push({exclude, loader: 'eslint-loader', test: /\.js$/});
 }
 
 export default {
+  cache: !production,
+  debug: production,
+  devtool: production ? 'eval' : null,
   entry,
   module: {
     loaders: [
@@ -49,5 +55,5 @@ export default {
   },
   output,
   plugins,
-  resolve: {modulesDirectories: ['modules', 'node_modules']}
+  resolve: {modulesDirectories: ['src', 'node_modules']}
 };
