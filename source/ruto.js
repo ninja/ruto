@@ -29,4 +29,4 @@ export default function register (server, options, next) {
   next();
 }
 
-register.attributes = {name: 'Hapi React Routes'};
+register.attributes = {name: 'ruto'};
