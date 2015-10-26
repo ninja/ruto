@@ -15,40 +15,40 @@ server.register([api, {
   },
   register: ruto
 }], error => {
-  test('Server register', t => {
-    t.error(error, 'No errors!');
+  test('Register plugin:', t => {
+    t.error(error, 'Should register without error.');
     t.end();
   });
 
-  test('IndexRoute', t => {
+  test('Route to roles:', t => {
     server.inject('/', response => {
-      t.equals(response.statusCode, 200, 'Should return status code 200.');
+      t.equals(response.statusCode, 200, 'Should return status code: 200.');
       t.end();
     });
   });
 
-  test('Route', t => {
+  test('Route to role:', t => {
     const key = 'a';
 
     server.inject(`/role/${key}`, response => {
       const {result, statusCode} = response;
 
-      t.equals(statusCode, 200, 'Should return status code 200.');
-      t.equals(result.params.key, key, 'Should return param key.');
+      t.equals(statusCode, 200, 'Should return status code: 200.');
+      t.equals(result.params.key, key, `Should return key param with value: "${key}".`);
       t.end();
     });
   });
 
-  test('Redirect', t => {
+  test('Redirect to role:', t => {
     server.inject('/redirect/b', response => {
-      t.equals(response.statusCode, 302, 'Should return status code 302.');
+      t.equals(response.statusCode, 302, 'Should return status code: 302.');
       t.end();
     });
   });
 
-  test('NotFound', t => {
+  test('Route not found:', t => {
     server.inject('/notfound', response => {
-      t.equals(response.statusCode, 404, 'Should return status code 404.');
+      t.equals(response.statusCode, 404, 'Should return status code: 404.');
       t.end();
     });
   });
