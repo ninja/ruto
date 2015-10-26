@@ -8,4 +8,38 @@ Rendering a matched route can be either:
 - **homomorphic**: Server and client render separately.
 - **isomorphic**: Server renders. Client re-renders only upon user interaction.
 
-See [examples](examples) and [tests](test.js) for details.
+### Usage:
+See [examples](examples) for details.
+
+### Development:
+Optional ruto binary:
+
+```bash
+cd ~/ruto
+npm link
+```
+
+Run tests:
+
+```bash
+ruto test
+```
+
+Start homomorphic example:
+
+```bash
+ruto start
+```
+
+Start isomorphic example:
+
+```bash
+ruto start -i
+```
+
+Start isomorphic example without ruto binary:
+
+```bash
+cd ~/ruto
+RUTO_HANDLER=isomorphic npm run start
+```
