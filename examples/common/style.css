@@ -1,0 +1,14 @@
+body {
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-size: 6vmin;
+  justify-content: space-between;
+  line-height: 6vmin;
+}
+
+a {
+  color: rgb(0, 216, 255);
+}
