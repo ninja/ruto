@@ -8,12 +8,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Redux action, reducer and connect history to store helpers.
 - Express server example.
 - Basic gists of plugin/middleware usage to readme.
+- Command line interface via shigoto.
 - Changelog.
 
 ### Changed
 - Hapi plugin now accessed as `register` property.
 - Hapi example rewritten to share common code with Express example.
 - Examples interface redesigned to display well on any device.
+- Babel 6 migration.
 
 ## [1.0.3] - 2015-10-06
 ### Fixed
