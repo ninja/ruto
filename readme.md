@@ -1,45 +1,30 @@
-# ルート
-## Rūto
-### Hapi React Router plugin.
+## Rūto - Universal routing for React.
 
-React Router handles all incoming requests. 302 redirects and 404 not founds are passed through to default Hapi routing.
+Handles all incoming requests with react-router.
 
-Rendering a matched route can be either:
-- **homomorphic**: Server and client render separately.
-- **isomorphic**: Server renders. Client re-renders only upon user interaction.
+Supports Hapi and Connect/Express servers.
+
+302 (redirect) and 404 (not found) are delegated to the server.
+
+Includes optional helpers for connecting routes to a redux store.
 
 ### Usage:
-See [examples](examples) for details.
 
-### Development:
-Optional ruto binary:
+See [examples](examples).
+
+### Developing a pull request:
+
+Start examples:
 
 ```bash
 cd ~/ruto
-npm link
+npm run start
+open http://localhost:3000/
+open http://localhost:3000/?redux=true
 ```
 
 Run tests:
 
 ```bash
-ruto test
-```
-
-Start homomorphic example:
-
-```bash
-ruto start
-```
-
-Start isomorphic example:
-
-```bash
-ruto start -i
-```
-
-Start isomorphic example without ruto binary:
-
-```bash
-cd ~/ruto
-RUTO_HANDLER=isomorphic npm run start
+npm test
 ```
