@@ -31,8 +31,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/v1.0.3...HEAD
-[1.0.3]: https://github.com/ninja/ruto/compare/v1.0.2...v1.0.3
-[1.0.2]: https://github.com/ninja/ruto/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/ninja/ruto/compare/v1.0.0...v1.0.1
+[Unreleased]: https://github.com/ninja/ruto/compare/1.0.3...feature/multi-server-support
+[1.0.3]: https://github.com/ninja/ruto/compare/1.0.2...1.0.3
+[1.0.2]: https://github.com/ninja/ruto/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/ninja/ruto/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/ninja/ruto/commit/d7d22cf06cea78eefd0a6b3160fbe2b20d056c57
