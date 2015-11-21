@@ -6,7 +6,7 @@
     "history": "^1.13.1",
     "react-router": "^1.0.0"
   },
-  "description": "Universal routing for React.",
+  "description": "Universal React Router",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.2.1",

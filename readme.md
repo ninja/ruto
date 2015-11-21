@@ -1,16 +1,13 @@
-## Rūto - Universal routing for React.
+# Rūto - Universal React Router
 
-Handles all incoming requests with react-router.
-
-Supports Hapi and Connect/Express servers.
-
-302 (redirect) and 404 (not found) are delegated to the server.
-
-Includes optional helpers for connecting routes to a redux store.
+- Handles all incoming requests with react-router.
+- Supports Hapi and Connect/Express servers.
+- 302 (redirect) and 404 (not found) are delegated to the server.
+- Includes optional helpers for connecting routes to a redux store.
 
 See [examples](examples), including hapi/express server and state/redux.
 
-### Hapi plugin:
+## Hapi plugin:
 
 ```javascript
 import React from 'react';
@@ -33,7 +30,7 @@ server.register({
 });
 ```
 
-### Express middleware:
+## Express middleware:
 
 ```javascript
 import React from 'react';
@@ -50,12 +47,12 @@ app.use(middleware({
     reply(`<div id="app">${app}</div><script src="/client.js"></script>`);
   },
   routes: <Route component={App} path="/"/>
-});
+}));
 ```
 
-### Developing a pull request:
+## Developing a pull request:
 
-Start examples:
+### Start examples:
 
 ```bash
 cd ~/ruto
@@ -63,7 +60,7 @@ npm run start
 open http://localhost:3000
 ```
 
-Run tests:
+### Run tests:
 
 ```bash
 npm test
