@@ -1,11 +1,10 @@
 {
   "bin": {
-    "ruto": "./node_modules/shigoto/bin.js"
+    "ruto": "./build/bin.js"
   },
   "dependencies": {
     "history": "^1.13.1",
-    "react-router": "^1.0.0",
-    "shigoto": "^1.0.0"
+    "react-router": "^1.0.0"
   },
   "description": "Universal React Router",
   "devDependencies": {
@@ -36,6 +35,7 @@
     "redbox-react": "^1.2.0",
     "redux": "^3.0.4",
     "redux-thunk": "^1.0.0",
+    "shigoto": "^1.0.0",
     "style-loader": "^0.13.0",
     "supertest": "^1.1.0",
     "tap-spec": "^4.1.1",
@@ -78,5 +78,5 @@
     "start:hapi": "Starts hapi server with examples.",
     "test": "Runs all tests."
   },
-  "version": "2.0.1"
+  "version": "2.0.2"
 }
