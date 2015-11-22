@@ -8,3 +8,5 @@ fs.readdirSync('src/ruto').forEach(file => {
     fs.writeFile(`build/${file}`, result.code);
   });
 });
+
+fs.writeFileSync('build/bin.js', fs.readFileSync('node_modules/shigoto/bin.js'));
