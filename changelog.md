@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.2] - 2015-11-21
+### Fixed
+- Copies shigoto binary during build sript.
+- Restores shigoto as a devDependency.
+
 ## [2.0.1] - 2015-11-21
 ### Fixed
 - Makes shigoto a dependency to correct an npm install issue.
