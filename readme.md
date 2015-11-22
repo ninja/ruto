@@ -1,45 +1,67 @@
-# ルート
-## Rūto
-### Hapi React Router plugin.
+# Rūto - Universal React Router
 
-React Router handles all incoming requests. 302 redirects and 404 not founds are passed through to default Hapi routing.
+- Handles all incoming requests with react-router.
+- Supports Hapi and Connect/Express servers.
+- 302 (redirect) and 404 (not found) are delegated to the server.
+- Includes optional helpers for connecting routes to a redux store.
 
-Rendering a matched route can be either:
-- **homomorphic**: Server and client render separately.
-- **isomorphic**: Server renders. Client re-renders only upon user interaction.
+See [examples](examples), including hapi/express server and state/redux.
 
-### Usage:
-See [examples](examples) for details.
+## Hapi plugin:
 
-### Development:
-Optional ruto binary:
+```javascript
+import React from 'react';
+import {RoutingContext} from 'react-router';
+import {register} from 'ruto';
+import {renderToString} from 'react-dom/server';
+
+server.register({
+  options: {
+    handler: ({props, reply}) => {
+      const app = renderToString(<RoutingContext {...props}/>);
+
+      // See examples for universal state/redux techniques.
+
+      reply(`<div id="app">${app}</div><script src="/client.js"></script>`);
+    },
+    routes: <Route component={App} path="/"/>
+  },
+  register
+});
+```
+
+## Express middleware:
+
+```javascript
+import React from 'react';
+import {RoutingContext} from 'react-router';
+import {middleware} from 'ruto';
+import {renderToString} from 'react-dom/server';
+
+app.use(middleware({
+  handler: ({props, reply}) => {
+    const app = renderToString(<RoutingContext {...props}/>);
+
+    // See examples for universal state/redux techniques.
+
+    reply(`<div id="app">${app}</div><script src="/client.js"></script>`);
+  },
+  routes: <Route component={App} path="/"/>
+}));
+```
+
+## Developing a pull request:
+
+### Start examples:
 
 ```bash
 cd ~/ruto
-npm link
+npm run start
+open http://localhost:3000
 ```
 
-Run tests:
+### Run tests:
 
 ```bash
-ruto test
-```
-
-Start homomorphic example:
-
-```bash
-ruto start
-```
-
-Start isomorphic example:
-
-```bash
-ruto start -i
-```
-
-Start isomorphic example without ruto binary:
-
-```bash
-cd ~/ruto
-RUTO_HANDLER=isomorphic npm run start
+npm test
 ```
