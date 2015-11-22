@@ -6,7 +6,7 @@
     "history": "^1.13.1",
     "react-router": "^1.0.0"
   },
-  "description": "Universal routing for React.",
+  "description": "Universal React Router",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.2.1",
@@ -22,7 +22,7 @@
     "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^3.10.0",
     "express": "^4.13.3",
-    "hapi": "^11.1.1",
+    "hapi": "^11.1.2",
     "hapi-webpack-plugin": "^1.2.2",
     "isomorphic-fetch": "^2.2.0",
     "json-loader": "^0.5.3",
