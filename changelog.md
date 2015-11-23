@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.3] - 2015-11-22
+### Fixed
+- Updates compatibility with shigoto 1.0.2 changes.
+- Simplifies bin configuration.
+- Removes superfluous preinstall lifecycle step for pruning.
+
 ## [2.0.2] - 2015-11-21
 ### Fixed
 - Copies shigoto binary during build sript.
@@ -44,7 +50,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.0.1...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/2.0.3...develop
+[2.0.3]: https://github.com/ninja/ruto/compare/2.0.2...2.0.3
+[2.0.2]: https://github.com/ninja/ruto/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/ninja/ruto/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/ninja/ruto/compare/1.0.3...2.0.0
 [1.0.3]: https://github.com/ninja/ruto/compare/1.0.2...1.0.3
