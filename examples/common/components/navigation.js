@@ -10,7 +10,7 @@ export function Navigation (props) {
 
   return (
     <div style={{
-      alignItems: 'center',
+      alignItems: 'flex-end',
       display: 'flex',
       fontSize: '5vmin',
       justifyContent: 'space-around',
