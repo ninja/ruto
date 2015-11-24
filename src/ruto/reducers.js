@@ -6,6 +6,10 @@ export function location (state = {
   search: ''
 }, action) {
   if (action.type === UPDATE) {
+    if (typeof action.location === 'string') {
+      action.location = {pathname: action.location};
+    }
+
     return Object.assign({}, state, action.location);
   }
 

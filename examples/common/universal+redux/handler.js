@@ -43,7 +43,7 @@ export function handler ({props, reply}) {
 </html>`);
   }
 
-  store.dispatch(update(props.location.pathname));
+  store.dispatch(update(props.location));
 
   if (!action) { return render(); }
 

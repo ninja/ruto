@@ -1,8 +1,8 @@
-import App from './components/app';
+import {App} from './components/app';
 import React from 'react';
 import {IndexRoute, Redirect, Route} from 'react-router';
-import Example from './components/example';
-import Examples from './components/examples';
+import {Example} from './components/example';
+import {Examples} from './components/examples';
 import {fetchExample, fetchExamples} from './actions';
 
 export const routes = (

@@ -18,8 +18,8 @@ export function Navigation (props) {
     }}>
       {list.map(({key, name, path}) => {
         if (!path) { return <span key={key}>{name}</span>; }
-        if (key === 'back') { return <Link key={key} to={path}>{name}</Link>; }
         if (isRedux) { path += '?redux=true'; }
+        if (key === 'back') { return <Link key={key} to={path}>{name}</Link>; }
 
         return (
           <div key={key} style={{

@@ -2,7 +2,7 @@ import {Navigation} from '../../components/navigation';
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 
-class Example extends Component {
+class ExampleComponent extends Component {
   componentDidMount () {
     const {dispatch, params, example, route} = this.props;
 
@@ -16,7 +16,7 @@ class Example extends Component {
   }
 }
 
-Example.propTypes = {
+ExampleComponent.propTypes = {
   dispatch: PropTypes.func,
   example: PropTypes.shape({
     key: PropTypes.string,
@@ -32,4 +32,4 @@ function mapStateToProps (state) {
   return {example: state.example, server: state.server};
 }
 
-export default connect(mapStateToProps)(Example);
+export const Example = connect(mapStateToProps)(ExampleComponent);
