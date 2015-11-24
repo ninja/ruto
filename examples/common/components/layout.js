@@ -25,7 +25,7 @@ export function Layout (props) {
         <span style={{fontSize: '4vmin', margin: '2vmin'}}>{'+'}</span>
         {server === 'hapi' ?
           <LogoHapi style={{fill: 'white', height: '18vmin'}}/> :
-          <LogoExpress style={{fontSize: '6vmin'}}/>
+          <LogoExpress style={{alignSelf: 'center', fontSize: '6vmin'}}/>
         }
       </div>
       {children}

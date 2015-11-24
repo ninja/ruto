@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.5] - 2015-11-23
+### Added
+- Displays location object on redux example pages.
+
+### Changed
+- Updates json-loader dependency version.
+- Visual alignment improvements with logos and navigation links.
+
+### Fixed
+- Correctly updates store from history changes.
+
 ## [2.0.4] - 2015-11-23
 ### Changed
 - Updates redux example handler to provide location object.
@@ -60,7 +71,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.0.4...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/2.0.5...develop
+[2.0.5]: https://github.com/ninja/ruto/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/ninja/ruto/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/ninja/ruto/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/ninja/ruto/compare/2.0.1...2.0.2
