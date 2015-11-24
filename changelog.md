@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.4] - 2015-11-23
+### Changed
+- Updates redux example handler to provide location object.
+- Updates redux examples to export named components (not default).
+
+### Fixed
+- Update action now accepts either pathname string or location object.
+- Back link in examples now maintains redux state.
+
+
 ## [2.0.3] - 2015-11-22
 ### Fixed
 - Updates compatibility with shigoto 1.0.2 changes.
@@ -50,7 +60,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.0.3...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/2.0.4...develop
+[2.0.4]: https://github.com/ninja/ruto/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/ninja/ruto/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/ninja/ruto/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/ninja/ruto/compare/2.0.0...2.0.1
@@ -58,4 +69,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [1.0.3]: https://github.com/ninja/ruto/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/ninja/ruto/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/ninja/ruto/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/ninja/ruto/commit/d7d22cf06cea78eefd0a6b3160fbe2b20d056c57
+[1.0.0]: https://github.com/ninja/ruto/compare/1.0.0

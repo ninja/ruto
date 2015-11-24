@@ -15,7 +15,16 @@ test(`${namespace}: location`, t => {
   t.end();
 });
 
-test(`${namespace}: update`, t => {
+test(`${namespace}: update: pathname`, t => {
+  const pathname = '/';
+  const action = update(pathname);
+  const state = location({}, action);
+
+  t.equal(state.pathname, pathname);
+  t.end();
+});
+
+test(`${namespace}: update: location`, t => {
   const hash = '';
   const pathname = '/';
   const search = '';
