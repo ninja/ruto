@@ -5,8 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ## [2.0.5] - 2015-11-23
+### Added
+- Displays location object on redux example pages.
+
 ### Changed
 - Updates json-loader dependency version.
+- Visual alignment improvements with logos and navigation links.
 
 ### Fixed
 - Correctly updates store from history changes.
