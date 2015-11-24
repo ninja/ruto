@@ -17,7 +17,7 @@ export function connect ({history, store}) {
     const storeLocation = store.getState().location;
 
     if (unequal({historyLocation, storeLocation})) {
-      const {hash, pathname, search} = storeLocation;
+      const {hash, pathname, search} = historyLocation;
 
       store.dispatch(update({hash, pathname, search}));
     }

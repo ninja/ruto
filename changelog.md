@@ -3,8 +3,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-## Changed
+
+## [2.0.5] - 2015-11-23
+### Changed
 - Updates json-loader dependency version.
+
+### Fixed
+- Correctly updates store from history changes.
 
 ## [2.0.4] - 2015-11-23
 ### Changed
@@ -62,7 +67,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.0.4...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/2.0.5...develop
+[2.0.5]: https://github.com/ninja/ruto/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/ninja/ruto/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/ninja/ruto/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/ninja/ruto/compare/2.0.1...2.0.2
