@@ -11,8 +11,8 @@ export function middleware (options) {
   if (cache && getRoutes) { routes = getRoutes(); }
 
   return function use (request, response, next) {
-    const {path, query} = request;
-    const location = createLocation(path);
+    const {query, url} = request;
+    const location = createLocation(url);
 
     if (!cache && getHandler) { handler = getHandler(query); }
     if (!cache && getRoutes) { routes = getRoutes(query); }

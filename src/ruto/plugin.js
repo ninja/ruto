@@ -11,7 +11,7 @@ export function register (server, options, callback) {
   if (cache && getRoutes) { routes = getRoutes(); }
 
   server.ext('onPreResponse', (request, reply) => {
-    const {path, query} = request;
+    const {path, query} = request.url;
     const location = createLocation(path);
 
     if (!cache && getHandler) { handler = getHandler(query); }
