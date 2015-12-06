@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 
 export function Logo (props) {
-  const {fill} = props;
+  const {fill} = props.style;
 
   return (
     <svg style={props.style} viewBox="0 0 300 226">
