@@ -1,5 +1,6 @@
 import {Navigation} from '../../components/navigation';
 import React, {Component, PropTypes} from 'react';
+import {getState} from '../state';
 
 export class Example extends Component {
   constructor (props, context) {
@@ -16,11 +17,7 @@ export class Example extends Component {
 
   componentDidMount () {
     if (!this.state.example.key) {
-      const {params, route} = this.props;
-
-      route.action(params)
-        .then(state => this.setState(state))
-        .catch(console.error);
+      getState(this.props, state => this.setState(state));
     }
   }
 

@@ -1,13 +1,11 @@
 import {App} from './components/app';
 import React from 'react';
 import {RoutingContext} from 'react-router';
+import {getState} from './state';
 import {renderToString} from 'react-dom/server';
 
 export function handler ({props, reply}) {
-  const {params, routes} = props;
-  const {action} = routes[routes.length - 1];
-
-  function render (state) {
+  getState(props, state => {
     const app = renderToString(
       <App state={state}>
         <RoutingContext {...props}/>
@@ -35,11 +33,5 @@ export function handler ({props, reply}) {
     <script src="/example-universal.js"></script>
   </body>
 </html>`);
-  }
-
-  if (!action) { return render({}); }
-
-  action(params)
-    .then(state => render(state))
-    .catch(error => { throw error; });
+  });
 }
