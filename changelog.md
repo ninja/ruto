@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.6] - 2015-12-06
+### Changed
+- Separates creating store from handler and client for universal+redux example.
+- Separates getting state from handler into a module for universal example.
+- Dependencies locked to specific versions and devDependencies updated.
+- Uses object form of history's push method.
+
+### Fixed
+- Corrects location creation to include search parameters.
+- Corrects fill property destructuring in hapi logo.
+
 ## [2.0.5] - 2015-11-23
 ### Added
 - Displays location object on redux example pages.
@@ -71,7 +82,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.0.5...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/2.0.6...develop
+[2.0.6]: https://github.com/ninja/ruto/compare/2.0.5...2.0.6
 [2.0.5]: https://github.com/ninja/ruto/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/ninja/ruto/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/ninja/ruto/compare/2.0.2...2.0.3

@@ -1,18 +1,11 @@
 import {Provider} from 'react-redux';
 import React from 'react';
 import {RoutingContext} from 'react-router';
-import {applyMiddleware, compose, createStore} from 'redux';
-import {update} from 'ruto';
-import {reducers} from './reducers';
-import reduxThunk from 'redux-thunk';
+import {createServerStore} from './store';
 import {renderToString} from 'react-dom/server';
 
 export function handler ({props, reply}) {
-  const {params, routes} = props;
-  const {action} = routes[routes.length - 1];
-  const store = compose(applyMiddleware(reduxThunk))(createStore)(reducers);
-
-  function render () {
+  createServerStore(props, store => {
     const app = renderToString(
       <Provider store={store}>
         <RoutingContext {...props}/>
@@ -41,12 +34,5 @@ export function handler ({props, reply}) {
     <script src="/example-universal+redux.js"></script>
   </body>
 </html>`);
-  }
-
-  store.dispatch(update(props.location));
-
-  if (!action) { return render(); }
-
-  store.subscribe(render);
-  store.dispatch(action(params));
+  });
 }

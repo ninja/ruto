@@ -30,7 +30,7 @@ export function connect ({history, store}) {
     if (unequal({historyLocation, storeLocation})) {
       const {hash, pathname, search} = storeLocation;
 
-      history.push([pathname, search, hash].join(''));
+      history.push({hash, pathname, search});
     }
   });
 
