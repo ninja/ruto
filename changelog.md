@@ -8,7 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Separates creating store from handler and client for universal+redux example.
 - Separates getting state from handler into a module for universal example.
-- Dependency updates.
+- Dependencies locked to specific versions and devDependencies updated.
+- Uses object form of history's push method.
 
 ### Fixed
 - Corrects location creation to include search parameters.
