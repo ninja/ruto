@@ -1,11 +1,11 @@
-import {UPDATE} from './actions';
+import {types} from './types';
 
 export function location (state = {
   hash: '',
   pathname: '/',
   search: ''
 }, action) {
-  if (action.type === UPDATE) {
+  if (action.type === types.UPDATE) {
     if (typeof action.location === 'string') {
       action.location = {pathname: action.location};
     }
