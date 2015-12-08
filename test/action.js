@@ -1,11 +1,11 @@
-import {UPDATE} from 'ruto/actions';
+import {types} from 'ruto/types';
 import {update} from 'ruto';
 import test from 'tape';
 
 const namespace = 'action';
 
 test(`${namespace}: type`, t => {
-  t.equal(update().type, UPDATE);
+  t.equal(update().type, types.UPDATE);
   t.end();
 });
 

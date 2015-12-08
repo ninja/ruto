@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.1.0] - 2015-12-08
+### Added
+- createTypes utility: Accepts array of strings and optional redux namespace.
+
+### Changed
+- Renames internal scripts directory to cli for clarity of purpose.
+- Updates react-router version.
+
 ## [2.0.6] - 2015-12-06
 ### Changed
 - Separates creating store from handler and client for universal+redux example.
@@ -82,7 +90,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.0.6...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/2.1.0...develop
+[2.1.0]: https://github.com/ninja/ruto/compare/2.1.0...2.0.6
 [2.0.6]: https://github.com/ninja/ruto/compare/2.0.5...2.0.6
 [2.0.5]: https://github.com/ninja/ruto/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/ninja/ruto/compare/2.0.3...2.0.4

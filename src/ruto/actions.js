@@ -1,9 +1,9 @@
-export const UPDATE = '@@location/UPDATE';
+import {types} from './types';
 
 export function update (location) {
   return {
     location,
-    type: UPDATE
+    type: types.UPDATE
   };
 }
 
