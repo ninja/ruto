@@ -2,7 +2,7 @@
   "bin": "cli/bin.js",
   "dependencies": {
     "history": "1.13.1",
-    "react-router": "1.0.1"
+    "react-router": "1.0.2"
   },
   "description": "Universal React Router",
   "devDependencies": {
