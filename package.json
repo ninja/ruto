@@ -1,5 +1,5 @@
 {
-  "bin": "build/bin.js",
+  "bin": "cli/bin.js",
   "dependencies": {
     "history": "1.13.1",
     "react-router": "1.0.1"
@@ -53,7 +53,7 @@
     "url": "git://github.com/ninja/ruto"
   },
   "scripts": {
-    "build": "node scripts/build",
+    "build": "node cli/build",
     "lint": "eslint .",
     "ls": "npm ls --depth 0",
     "outdated": "npm outdated --depth 0",
@@ -75,5 +75,5 @@
     "start:hapi": "Starts hapi server with examples.",
     "test": "Runs all tests."
   },
-  "version": "2.0.6"
+  "version": "2.1.0"
 }

@@ -40,7 +40,7 @@ fs.stat('build', error => {
   fs.readFile('node_modules/shigoto/bin.js', (error, data) => {
     if (error) { throw error; }
 
-    fs.writeFile('build/bin.js', data, error => {
+    fs.writeFile('cli/bin.js', data, error => {
       if (error) { throw error; }
     });
   });
