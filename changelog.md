@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - createTypes utility: Accepts array of strings and optional redux namespace.
 
+### Changed
+- Renames internal scripts directory to cli for clarity of purpose.
+- Updates react-router version.
+
 ## [2.0.6] - 2015-12-06
 ### Changed
 - Separates creating store from handler and client for universal+redux example.
