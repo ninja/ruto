@@ -1,14 +1,8 @@
-import {FETCH_EXAMPLE, FETCH_EXAMPLES} from './actions';
+import {types} from './types';
 import {combineReducers} from 'redux';
 import {location} from 'ruto';
 
-// function unique (array) {
-//   return [...new Set(array)];
-// }
-
-// function union (...arrays) {
-//   return [...new Set([].concat(...arrays))];
-// }
+const {FETCH_EXAMPLE, FETCH_EXAMPLES} = types;
 
 function example (state = {}, action) {
   if (action.type === FETCH_EXAMPLE) {
