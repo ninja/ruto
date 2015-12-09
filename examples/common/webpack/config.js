@@ -21,26 +21,19 @@ export const config = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          plugins: [
-            // Disabled until Babel 6 is supported.
-            // https://github.com/gaearon/babel-plugin-react-transform/issues/46
-            // [
-            //   'react-transform',
-            //   {
-            //     transforms: [
-            //       {
-            //         transform: 'react-transform-hmr',
-            //         imports: ['react'],
-            //         locals: ['module']
-            //       },
-            //       {
-            //         transform: 'react-transform-catch-errors',
-            //         imports: ['react', 'redbox-react']
-            //       }
-            //     ]
-            //   }
-            // ]
-          ],
+          plugins: [['react-transform', {
+            transforms: [
+              {
+                transform: 'react-transform-hmr',
+                imports: ['react'],
+                locals: ['module']
+              },
+              {
+                transform: 'react-transform-catch-errors',
+                imports: ['react', 'redbox-react']
+              }
+            ]
+          }]],
           presets: ['es2015', 'react']
         },
         test: /\.js$/
