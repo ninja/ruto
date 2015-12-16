@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.1.1] - 2015-12-16
+### Changed
+- Updates example development dependency versions.
+- Lowers Node.js engine version to 4 as 5 was not a hard requirement.
+
+### Fixed
+- Adds missing polyfill to client.
+- Minor syntax fixes.
+
 ## [2.1.0] - 2015-12-08
 ### Added
 - createTypes utility: Accepts array of strings and optional redux namespace.

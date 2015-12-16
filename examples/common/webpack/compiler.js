@@ -9,7 +9,7 @@ export const compiler = new Webpack(config);
 // Server-side hot module reloading.
 compiler.plugin('done', () => {
   if (compiles > 0) {
-    let paths = [];
+    const paths = [];
 
     Object.keys(require.cache).forEach(path => {
       if (~path.indexOf(resolve(__dirname, '..'))) {
