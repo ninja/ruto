@@ -1,10 +1,11 @@
+import 'babel-polyfill';
 import '../style.css';
 import {Provider} from 'react-redux';
 import React from 'react';
 import {Router} from 'react-router';
 import {connect} from 'ruto';
-import {createHistory} from 'history';
 import {createClientStore} from './store';
+import {createHistory} from 'history';
 import {render} from 'react-dom';
 import {routes} from './routes';
 
