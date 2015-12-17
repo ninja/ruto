@@ -18,7 +18,7 @@ export function middleware (options) {
     if (!cache && getRoutes) { routes = getRoutes(query); }
 
     match({location, routes}, (error, redirect, props) => {
-      if (error) { return response.status(500).send(error); }
+      if (error) { return next(error); }
       if (redirect) {
         const {pathname, search} = redirect;
 
