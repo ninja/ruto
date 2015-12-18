@@ -26,12 +26,7 @@ export function middleware (options) {
       }
       if (!props) { return next(); }
 
-      function reply (string) {
-        response.send(string);
-        response.end();
-      }
-
-      handler({props, reply});
+      handler({props, request, response, next});
     });
   };
 }

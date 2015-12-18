@@ -8,7 +8,10 @@ const app = express();
 const namespace = 'express middleware';
 
 app.use(middleware({
-  handler: ({props, reply}) => reply(props),
+  handler: ({props, request, response}) => {
+    response.send({props, headers: request.headers});
+    response.end();
+  },
   routes
 }));
 
@@ -35,7 +38,8 @@ test(`${namespace}: route to endpoint:`, t => {
       const {body, statusCode} = response;
 
       t.equals(statusCode, 200, 'Should return status code: 200.');
-      t.equals(body.params.id, id, `Should return id param with value: "${id}".`);
+      t.equals(body.props.params.id, id, `Should return id param with value: "${id}".`);
+      t.true(typeof body.headers === 'object', 'Should return headers object.');
       t.end();
     });
 });

@@ -40,11 +40,6 @@ export const config = {
       },
       {
         exclude: /node_modules/,
-        loader: 'style!css!autoprefixer?browsers=last 2 versions&safe=true',
-        test: /\.css$/
-      },
-      {
-        exclude: /node_modules/,
         loader: 'json',
         test: /\.json$/
       }

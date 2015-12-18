@@ -26,7 +26,7 @@ export function register (server, options, callback) {
       }
       if (!props) { return reply.continue(); }
 
-      handler({props, reply});
+      handler({props, reply, request});
     });
   });
 

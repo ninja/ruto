@@ -1,5 +1,4 @@
 import 'babel-polyfill';
-import '../style.css';
 import {App} from './components/app';
 import React from 'react';
 import {Router} from 'react-router';
