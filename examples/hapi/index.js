@@ -1,6 +1,5 @@
 import {Server} from 'hapi';
-import {assets} from '../webpack/assets';
-import {compiler} from '../webpack/compiler';
+import {assets, compiler} from '../webpack';
 import {handler} from './handler';
 import {register as registerAPI} from './api';
 import registerWebpack from 'hapi-webpack-plugin';
