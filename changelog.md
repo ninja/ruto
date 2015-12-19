@@ -9,9 +9,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Hapi plugin and Express middleware now return request object.
 
 ### Changed
-- Express middleware now returns response object (instead of reply).
-- Express middleware uses built-in error handling provided by Express.
+- Middleware now returns response object (instead of reply).
+- Middleware uses built-in error handling from Express.
 - Tests and examples updated, accordingly.
+- Examples simplified without hot reloading and linting.
 - Examples global styles reimplemented with Radium.
 
 ## [2.1.1] - 2015-12-16
