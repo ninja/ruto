@@ -1,21 +1,12 @@
 import {createLocation} from 'history';
 import {match} from 'react-router';
 
-export function register (server, options, callback) {
-  const {cache = false, getHandler, getRoutes} = options;
-  let {handler, routes} = options;
-
-  if (!handler && !getHandler) { return callback('Missing handler.'); }
-  if (!routes && !getRoutes) { return callback('Missing routes.'); }
-  if (cache && getHandler) { handler = getHandler(); }
-  if (cache && getRoutes) { routes = getRoutes(); }
+export function register (server, {handler, routes}, callback) {
+  if (!handler) { return callback('Missing handler.'); }
+  if (!routes) { return callback('Missing routes.'); }
 
   server.ext('onPreResponse', (request, reply) => {
-    const {path, query} = request.url;
-    const location = createLocation(path);
-
-    if (!cache && getHandler) { handler = getHandler(query); }
-    if (!cache && getRoutes) { routes = getRoutes(query); }
+    const location = createLocation(request.url.path);
 
     match({location, routes}, (error, redirect, props) => {
       if (error) { return reply.continue(error); }
