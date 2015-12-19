@@ -1,10 +1,7 @@
 import {HotModuleReplacementPlugin, optimize} from 'webpack';
 
 const {OccurenceOrderPlugin} = optimize;
-const entry = {
-  'example-universal': ['./examples/common/universal/client'],
-  'example-universal+redux': ['./examples/common/universal+redux/client']
-};
+const entry = {client: ['./examples/client']};
 
 Object.keys(entry).forEach(function (key) {
   entry[key].unshift('webpack-hot-middleware/client?reload=true');
