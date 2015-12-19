@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0] - 2015-12-18
+### Added
+- Hapi plugin and Express middleware now return request object.
+
+### Changed
+- Express middleware now returns response object (instead of reply).
+- Express middleware uses built-in error handling provided by Express.
+- Tests and examples updated, accordingly.
+- Examples global styles reimplemented with Radium.
+
 ## [2.1.1] - 2015-12-16
 ### Changed
 - Updates example development dependency versions.
@@ -99,7 +109,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/2.1.0...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/3.0.0...develop
+[3.0.0]: https://github.com/ninja/ruto/compare/3.0.0...2.1.0
 [2.1.0]: https://github.com/ninja/ruto/compare/2.1.0...2.0.6
 [2.0.6]: https://github.com/ninja/ruto/compare/2.0.5...2.0.6
 [2.0.5]: https://github.com/ninja/ruto/compare/2.0.4...2.0.5

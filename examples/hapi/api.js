@@ -1,6 +1,6 @@
-import {getExample, examples} from '../common/data';
+import {getExample, examples} from '../data';
 
-function register (server, options, next) {
+export function register (server, options, next) {
   server.route({
     method: 'GET',
     path: '/api/example/{key}',
@@ -29,5 +29,3 @@ function register (server, options, next) {
 }
 
 register.attributes = {name: 'Ninja Roles API'};
-
-export const plugin = {register};

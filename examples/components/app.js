@@ -1,4 +1,4 @@
-import {Layout} from '../../components/layout';
+import {Layout} from './layout';
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 
