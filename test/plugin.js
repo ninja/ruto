@@ -9,7 +9,9 @@ const server = new Server();
 server.connection();
 server.register({
   options: {
-    handler: ({props, reply}) => reply(props),
+    handler: ({props, reply, request}) => {
+      reply({id: props.params.id, headers: request.headers});
+    },
     routes
   },
   register
@@ -40,7 +42,8 @@ server.register({
       const {result, statusCode} = response;
 
       t.equals(statusCode, 200, 'Should return status code: 200.');
-      t.equals(result.params.id, id, `Should return id param with value: "${id}".`);
+      t.equals(result.id, id, `Should return id param with value: "${id}".`);
+      t.true(typeof result.headers === 'object', 'Should return headers object.');
       t.end();
     });
   });

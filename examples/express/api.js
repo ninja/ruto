@@ -1,22 +1,21 @@
-import {getExample, examples} from '../common/data';
+import {Router} from 'express';
+import {getExample, examples} from '../data';
 
-const server = 'express';
+export const api = new Router();
 
-export function register ({app}) {
-  app.get('/api/example/:key', function (req, res) {
-    const {key} = req.params;
-    let example = getExample(key);
+api.get('/', (request, response) => {
+  response.send({examples, server: 'express'});
+});
 
-    if (typeof example === 'undefined') {
-      res.status(404);
+api.get('/example/:key', (request, response) => {
+  const {key} = request.params;
+  let example = getExample(key);
 
-      example = {key, name: `Example with key ${key} not found.`};
-    }
+  if (typeof example === 'undefined') {
+    response.status(404);
 
-    res.send({example, server});
-  });
+    example = {key, name: `Example with key ${key} not found.`};
+  }
 
-  app.get('/api', function (req, res) {
-    res.send({examples, server});
-  });
-}
+  response.send({example, server: 'express'});
+});

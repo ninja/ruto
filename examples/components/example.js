@@ -1,4 +1,4 @@
-import {Navigation} from '../../components/navigation';
+import {Navigation} from './navigation';
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 
@@ -12,7 +12,7 @@ class ExampleComponent extends Component {
   }
 
   render () {
-    return <Navigation example={this.props.example} isRedux/>;
+    return <Navigation example={this.props.example}/>;
   }
 }
 

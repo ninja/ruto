@@ -6,42 +6,33 @@
   },
   "description": "Universal React Router",
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
-    "babel-core": "^6.3.17",
+    "babel-core": "^6.3.21",
     "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.0",
-    "babel-plugin-react-transform": "^2.0.0-beta1",
     "babel-polyfill": "^6.3.14",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-tape-runner": "^2.0.0",
-    "css-loader": "^0.23.0",
     "eslint": "^1.10.3",
     "eslint-config-ninja": "^1.1.4",
-    "eslint-loader": "^1.1.1",
     "eslint-plugin-react": "^3.11.3",
     "express": "^4.13.3",
     "hapi": "^11.1.2",
     "hapi-webpack-plugin": "^1.3.0",
     "isomorphic-fetch": "^2.2.0",
-    "json-loader": "^0.5.4",
     "node-dev": "^2.7.1",
+    "radium": "^0.15.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.1",
-    "react-transform-catch-errors": "^1.0.0",
-    "react-transform-hmr": "^1.0.1",
-    "redbox-react": "^1.2.0",
     "redux": "^3.0.5",
     "redux-thunk": "^1.0.2",
     "shigoto": "^1.0.3",
-    "style-loader": "^0.13.0",
     "supertest": "^1.1.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.2.2",
     "webpack": "^1.12.9",
-    "webpack-dev-middleware": "^1.4.0",
-    "webpack-hot-middleware": "^2.6.0"
+    "webpack-dev-middleware": "^1.4.0"
   },
   "engines": {
     "node": "^4"
@@ -61,9 +52,9 @@
     "prebuild": "npm test",
     "prepublish": "npm run build",
     "pretest": "npm run lint",
-    "start": "npm run start:hapi",
-    "start:express": "NODE_PATH=src node-dev examples/express",
-    "start:hapi": "NODE_PATH=src node-dev examples/hapi",
+    "start": "NODE_PATH=src node-dev examples/server --server=hapi",
+    "start:express": "npm run start --server=express",
+    "start:hapi": "npm run start --server=hapi",
     "test": "NODE_PATH=src babel-tape-runner test/**/*.js | tap-spec"
   },
   "scriptsInfo": {
@@ -76,5 +67,5 @@
     "start:hapi": "Starts hapi server with examples.",
     "test": "Runs all tests."
   },
-  "version": "2.1.1"
+  "version": "3.0.0"
 }

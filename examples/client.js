@@ -1,5 +1,4 @@
 import 'babel-polyfill';
-import '../style.css';
 import {Provider} from 'react-redux';
 import React from 'react';
 import {Router} from 'react-router';
