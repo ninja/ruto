@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.1] - 2016-01-05
+### Changed
+- Dependency versions.
+
 ## [3.0.0] - 2015-12-18
 ### Added
 - Hapi plugin and Express middleware now return request object.
