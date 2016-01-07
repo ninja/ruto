@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.2] - 2016-01-07
+### Changed
+- Removes minimum node version.
+- Bumps development dependency versions.
+
 ## [3.0.1] - 2016-01-05
 ### Changed
 - Dependency versions.
