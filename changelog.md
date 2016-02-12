@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [4.0.0] - 2016-02-11
+### Changed
+- Removes redux helpers.
+- Upgrades to react-router 2.0.
+- Removes dependency on history.
+- Simplifies examples accordingly.
+- Bumps development dependency versions.
+
 ## [3.0.2] - 2016-01-07
 ### Changed
 - Removes minimum node version.
@@ -119,7 +127,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Hapi plugin.
 
-[Unreleased]: https://github.com/ninja/ruto/compare/3.0.0...develop
+[Unreleased]: https://github.com/ninja/ruto/compare/develop...4.0.0
+[4.0.0]: https://github.com/ninja/ruto/compare/4.0.0...3.0.2
+[3.0.2]: https://github.com/ninja/ruto/compare/3.0.2...3.0.1
+[3.0.1]: https://github.com/ninja/ruto/compare/3.0.1...3.0.0
 [3.0.0]: https://github.com/ninja/ruto/compare/3.0.0...2.1.0
 [2.1.0]: https://github.com/ninja/ruto/compare/2.1.0...2.0.6
 [2.0.6]: https://github.com/ninja/ruto/compare/2.0.5...2.0.6

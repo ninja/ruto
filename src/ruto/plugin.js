@@ -1,4 +1,3 @@
-import {createLocation} from 'history';
 import {match} from 'react-router';
 
 export function register (server, {handler, routes}, callback) {
@@ -6,9 +5,7 @@ export function register (server, {handler, routes}, callback) {
   if (!routes) { return callback('Missing routes.'); }
 
   server.ext('onPreResponse', (request, reply) => {
-    const location = createLocation(request.url.path);
-
-    match({location, routes}, (error, redirect, props) => {
+    match({location: request.url.path, routes}, (error, redirect, props) => {
       if (error) { return reply.continue(error); }
       if (redirect) {
         const {pathname, search} = redirect;

@@ -1,4 +1,3 @@
-import {createLocation} from 'history';
 import {match} from 'react-router';
 
 export function middleware ({handler, routes}) {
@@ -6,10 +5,7 @@ export function middleware ({handler, routes}) {
   if (!routes) { throw new Error('Missing routes.'); }
 
   return function use (request, response, next) {
-    const {url} = request;
-    const location = createLocation(url);
-
-    match({location, routes}, (error, redirect, props) => {
+    match({location: request.url, routes}, (error, redirect, props) => {
       if (error) { return next(error); }
       if (redirect) {
         const {pathname, search} = redirect;

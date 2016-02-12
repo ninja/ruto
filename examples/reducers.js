@@ -1,6 +1,5 @@
 import {types} from './types';
 import {combineReducers} from 'redux';
-import {location} from 'ruto';
 
 const {FETCH_EXAMPLE, FETCH_EXAMPLES} = types;
 
@@ -28,4 +27,4 @@ function server (state = '', action) {
   return state;
 }
 
-export const reducers = combineReducers({location, example, examples, server});
+export const reducers = combineReducers({example, examples, server});

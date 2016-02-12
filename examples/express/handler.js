@@ -1,6 +1,6 @@
 import {Provider} from 'react-redux';
 import React from 'react';
-import {RoutingContext} from 'react-router';
+import {RouterContext} from 'react-router';
 import {createServerStore} from '../store';
 import {renderToStaticStyle} from '../style';
 import {renderToString} from 'react-dom/server';
@@ -11,7 +11,7 @@ export function handler ({props, request, response}) {
   createServerStore(props, store => {
     const app = renderToString(
       <Provider store={store}>
-        <RoutingContext {...props}/>
+        <RouterContext {...props}/>
       </Provider>
     );
     const state = JSON.stringify(store.getState());

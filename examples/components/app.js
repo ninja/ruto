@@ -3,11 +3,11 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 
 function AppComponent (props) {
-  const {children, location, server} = props;
-  const {hash, pathname, search} = location;
+  const {children, server} = props;
+  const {hash, pathname, search} = children.props.location;
 
   return (
-    <Layout isRedux server={server}>
+    <Layout server={server}>
       {children}
       <div style={{
         fontFamily: 'Input Mono, Menlo, monospace',
